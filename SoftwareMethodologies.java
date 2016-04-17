@@ -54,26 +54,35 @@ public class SoftwareMethodologies extends JFrame {
 		titleLabel = new JLabel("Marquette L.I.M.O."); // creates label
 		titleLabel.setForeground(new Color(255,255,0)); // sets color of label to white
 
-		titleLabel.setFont(new Font("Verdana", Font.BOLD, 30)); // sets font of
+		titleLabel.setFont(new Font("Verdana", Font.BOLD, 30)); //sets font of title
 		titleLabel.setHorizontalAlignment(JLabel.CENTER);
 		titleLabel.setVerticalAlignment(JLabel.TOP);
 		constraints.anchor = GridBagConstraints.PAGE_START;
 		contentPane.add(titleLabel, constraints);
 
+		GridBagConstraints constraints2 = new GridBagConstraints();
+		constraints2.fill = GridBagConstraints.NONE;
+		constraints2.weightx = 0.5;
+		constraints2.weighty = 1.0;
+		constraints2.gridy = 3;
+		constraints2.gridx = 3;
+		constraints2.ipady = 20;
+		constraints2.ipadx = 10;
+		constraints2.gridwidth = 1;
+		constraints2.insets = new Insets(10,0,0,0);
 
-
-		
-
+		constraints2.anchor= GridBagConstraints.PAGE_START;
+		constraints2.anchor= GridBagConstraints.SOUTHWEST;
 		constraints.anchor = GridBagConstraints.WEST;
-		JTextField login = new JTextField();
-		login.setText("Login");
+		JTextField login = new JTextField("Login");
+		login.setFont(new Font("Arial", Font.BOLD, 18));
 		login.setEditable(true);
 		contentPane.add(login, constraints);
 		
-		JTextField password = new JTextField();
-		password.setText("Password");
+		JTextField password = new JTextField("Password");
+		password.setFont(new Font("Arial", Font.BOLD, 18));
 		password.setEditable(true);
-		contentPane.add(password, constraints);
+		contentPane.add(password, constraints2);
 		
 		 login.addMouseListener(new MouseAdapter(){
 	            @Override
